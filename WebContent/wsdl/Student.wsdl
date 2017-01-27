@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://student.ap.edu" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://student.ap.edu" xmlns:intf="http://student.ap.edu" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://student.ap.edu" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getAge">
+    <complexType/>
+   </element>
+   <element name="getAgeResponse">
+    <complexType>
+     <sequence>
+      <element name="getAgeReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAge">
+    <complexType>
+     <sequence>
+      <element name="age" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAgeResponse">
+    <complexType/>
+   </element>
+   <element name="setLastname">
+    <complexType>
+     <sequence>
+      <element name="lastname" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLastnameResponse">
+    <complexType/>
+   </element>
+   <element name="getLastname">
+    <complexType/>
+   </element>
+   <element name="getLastnameResponse">
+    <complexType>
+     <sequence>
+      <element name="getLastnameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFirstname">
+    <complexType>
+     <sequence>
+      <element name="firstname" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFirstnameResponse">
+    <complexType/>
+   </element>
+   <element name="getFirstname">
+    <complexType/>
+   </element>
+   <element name="getFirstnameResponse">
+    <complexType>
+     <sequence>
+      <element name="getFirstnameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setAgeResponse">
+
+      <wsdl:part element="impl:setAgeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFirstnameRequest">
+
+      <wsdl:part element="impl:setFirstname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFirstnameResponse">
+
+      <wsdl:part element="impl:setFirstnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAgeRequest">
+
+      <wsdl:part element="impl:getAge" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAgeRequest">
+
+      <wsdl:part element="impl:setAge" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastnameRequest">
+
+      <wsdl:part element="impl:setLastname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastnameRequest">
+
+      <wsdl:part element="impl:getLastname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFirstnameResponse">
+
+      <wsdl:part element="impl:getFirstnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFirstnameRequest">
+
+      <wsdl:part element="impl:getFirstname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAgeResponse">
+
+      <wsdl:part element="impl:getAgeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastnameResponse">
+
+      <wsdl:part element="impl:setLastnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastnameResponse">
+
+      <wsdl:part element="impl:getLastnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Student">
+
+      <wsdl:operation name="getAge">
+
+         <wsdl:input message="impl:getAgeRequest" name="getAgeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAgeResponse" name="getAgeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAge">
+
+         <wsdl:input message="impl:setAgeRequest" name="setAgeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setAgeResponse" name="setAgeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastname">
+
+         <wsdl:input message="impl:setLastnameRequest" name="setLastnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLastnameResponse" name="setLastnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastname">
+
+         <wsdl:input message="impl:getLastnameRequest" name="getLastnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLastnameResponse" name="getLastnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFirstname">
+
+         <wsdl:input message="impl:setFirstnameRequest" name="setFirstnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setFirstnameResponse" name="setFirstnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFirstname">
+
+         <wsdl:input message="impl:getFirstnameRequest" name="getFirstnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFirstnameResponse" name="getFirstnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StudentSoapBinding" type="impl:Student">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAge">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAgeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAgeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAge">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setAgeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setAgeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLastnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLastnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLastnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLastnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFirstname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFirstnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFirstnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFirstname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFirstnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFirstnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StudentService">
+
+      <wsdl:port binding="impl:StudentSoapBinding" name="Student">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAP-JDBC/services/Student"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

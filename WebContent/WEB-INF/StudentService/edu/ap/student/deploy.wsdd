@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentService WSDL service -->
+
+  <service name="Student" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://student.ap.edu"/>
+      <parameter name="wsdlServiceElement" value="StudentService"/>
+      <parameter name="schemaQualified" value="http://student.ap.edu"/>
+      <parameter name="wsdlServicePort" value="Student"/>
+      <parameter name="className" value="edu.ap.student.Student"/>
+      <parameter name="wsdlPortType" value="Student"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://student.ap.edu" xmlns:retNS="http://student.ap.edu" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getAge" qname="operNS:getAge" returnQName="retNS:getAgeReturn" returnType="rtns:int" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://student.ap.edu" name="setAge" qname="operNS:setAge" soapAction="">
+        <parameter xmlns:pns="http://student.ap.edu" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:age" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://student.ap.edu" name="setLastname" qname="operNS:setLastname" soapAction="">
+        <parameter xmlns:pns="http://student.ap.edu" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:lastname" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://student.ap.edu" xmlns:retNS="http://student.ap.edu" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getLastname" qname="operNS:getLastname" returnQName="retNS:getLastnameReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://student.ap.edu" name="setFirstname" qname="operNS:setFirstname" soapAction="">
+        <parameter xmlns:pns="http://student.ap.edu" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:firstname" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://student.ap.edu" xmlns:retNS="http://student.ap.edu" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getFirstname" qname="operNS:getFirstname" returnQName="retNS:getFirstnameReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="getAge setLastname setFirstname getFirstname getLastname setAge"/>
+
+  </service>
+</deployment>
